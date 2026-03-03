@@ -12,8 +12,11 @@ target("learn")
     set_kind("binary")
     add_deps("test")
     add_files("learn/learn.cpp")
+    add_cxxflags("-fconstexpr-ops-limit=100000000")
+    add_cxxflags("-fconstexpr-depth=10000")
 
 target("summary")
     set_kind("binary")
     add_deps("test")
     add_files("learn/summary.cpp")
+
